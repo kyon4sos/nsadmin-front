@@ -277,7 +277,6 @@ export default defineComponent({
   color: #333;
   display: flex;
   align-items: center;
-  // overflow: hidden;
   .username {
     margin-left: 8px;
     line-height: 0;

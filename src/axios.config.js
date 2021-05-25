@@ -17,7 +17,6 @@ axios.interceptors.request.use(
     return config
   },
   (error) => {
-    // Do something with request error
     notification.error({
       message: error.message,
       description: '操作成功',

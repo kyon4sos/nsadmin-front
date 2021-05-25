@@ -24,7 +24,7 @@ export default {
     const store = useStore();
     const data = reactive({
       component: "DefaultLayout",
-      // currentRoute:router.getCurrentRoute()
+     
     });
     const locale = reactive(zhCN);
     onBeforeMount(() => {

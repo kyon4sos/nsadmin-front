@@ -28,7 +28,6 @@ _axios["default"].interceptors.request.use(function (config) {
 
   return config;
 }, function (error) {
-  // Do something with request error
   _antDesignVue.notification.error({
     message: error.message,
     description: '操作成功'

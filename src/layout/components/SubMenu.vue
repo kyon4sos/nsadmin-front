@@ -23,7 +23,6 @@ export default defineComponent({
   isSubMenu: true,
   props: {
     ...Menu.SubMenu.props,
-    // Cannot overlap with properties within Menu.SubMenu.props
     menuInfo: {
       type: Object,
       default: () => ({}),

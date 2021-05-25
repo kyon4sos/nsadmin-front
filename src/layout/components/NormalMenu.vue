@@ -47,7 +47,7 @@ export default defineComponent({
       router.push(key.toLowerCase());
     };
     onBeforeMount(() => {
-      // route.getCurrentRoute()
+  
       const title = route.meta.title;
       const key = route.path;
       store.commit("SET_TABS", { key, title });

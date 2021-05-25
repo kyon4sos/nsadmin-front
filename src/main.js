@@ -6,7 +6,6 @@ import icons from '@/antd/index'
 import App from './App.vue'
 import store from './store'
 import 'ant-design-vue/dist/antd.less'
-// import 'ant-design-vue/dist/antd.dark.less';
 import '@/assets/css/ani.less'
 import '@/assets/css/variable.less'
 import '@/assets/css/index.less'
@@ -17,7 +16,6 @@ icons.forEach((i) => {
   app.component(i.name, i)
 })
 app.use(message);
-// app.$el=message
 app
   .use(store)
   .use(antd)

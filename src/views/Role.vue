@@ -231,7 +231,7 @@ export default defineComponent({
       state: true,
     });
     const st = ref([]);
-    // const sysMenus= ref();
+
     const defaultSelcet = computed(() => {
       return st;
     });
@@ -325,7 +325,7 @@ export default defineComponent({
       formRef.value
         .validate()
         .then((res) => {
-          // res.menuIds = sysMenuNames.value;
+   
           updateRole(res).then(() => {
             formRef.value.resetFields();
             drawerVisible.value = false;
@@ -343,7 +343,6 @@ export default defineComponent({
         return;
       }
       tLoading.value = true;
-      console.log(data.pageInfo);
       getRoleByName(searchName.value, data.pageInfo).then((res) => {
         data.table = res.data.records;
         data.pageInfo = { ...res.data };

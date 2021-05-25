@@ -4,31 +4,6 @@ import DefaultLayout from './layout/DefaultLayout.vue'
 const routerHistory = createWebHistory()
 import Cookies from 'js-cookie'
 import { userStore} from 'vuex'
-// const router = createRouter({
-//   history: routerHistory,
-//   routes: [
-//     {
-//       path: '/',
-//       component: DefaultLayout,
-//       redirect: '/home',
-//       meta: { title: '根目录' },
-//       children: [
-//         {
-//           path: '/home',
-//           component: Home,
-//           meta: { title: '主页1' },
-//         },
-//       ],
-//     },
-//     {
-//       path: '/login',
-//       component: Login,
-//       meta: { title: '登录' },
-//     },
-//   ],
-// })
-
-// export default router
 
 const routes = [
   {
@@ -114,7 +89,6 @@ router.beforeEach((to, from, next) => {
   }
   let token = Cookies.get("token")
   if(token) {
-    console.log("token",token);
     next()
     return  
   }
