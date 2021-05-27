@@ -40,10 +40,12 @@ axios.interceptors.response.use(
       message.error(msg)
       Cookies.remove('token')
       router.push('/login')
+      return Promise.reject(response.data)
     }
 
     if (code === 40002) {
       message.error(msg)
+      return Promise.reject(response.data)
     }
     if (code == 40003) {
       notification.error({
@@ -51,12 +53,14 @@ axios.interceptors.response.use(
         duration: null,
         description: '请联系管理员',
       })
+      return Promise.reject(response.data)
     }
 
     if (code > 40100) {
       notification.error({
         message: msg,
       })
+      return Promise.reject(response.data)
     }
     if (code >= 40000) {
       notification.error({
